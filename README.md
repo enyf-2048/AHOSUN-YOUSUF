@@ -10,16 +10,17 @@ Join my Discord Server (The only way to contact) [`Coder Hub`]( https://discord.
 ```rs
 macro_rules! apply
 {
-    ($($_:tt),*) =>
+    ($val:expr) =>
     {
+        println!("{}", $val);
         Ok(())
     };
 }
 
 fn main()
 {
-    let _ = String::from("Reject Gaming, Embrace Coding!");
-    apply!(_);
+    let s = String::from("Reject Gaming, Embrace Coding!");
+    let _ = apply!(s);
     println!("Done");
 }
 ```
